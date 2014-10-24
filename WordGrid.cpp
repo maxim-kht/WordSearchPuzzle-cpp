@@ -130,9 +130,11 @@ void WordGrid::searchWord(std::string word) {
 
 // Initializes neighbors of each Letter
 void WordGrid::initializeNeighbors(bool wrap) {
-	for (int y = 0; y < maxRowCount; y++)
-		for (int x = 0; x < maxColCount; x++)
+	for (int y = 0; y < maxRowCount; y++) {
+		for (int x = 0; x < maxColCount; x++) {
 			populateNeighbors(y, x, wrap);
+		}
+	}
 }
 
 
