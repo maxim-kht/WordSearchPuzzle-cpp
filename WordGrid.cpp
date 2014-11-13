@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------
  *  Author:        Maxim Kukhtenkov
  *  Written:       10/10/2014
- *  Last updated:  10/10/2014
+ *  Last updated:  11/12/2014
  *  
  *  WordGrid Class for a Word Search Puzzle. Used to create a
  *  word grid object.
@@ -119,19 +119,24 @@ void WordGrid::searchWord(std::string word) {
 			
 		}
 
-	if (wordFound) {
+	if (wordFound) 
+	{
 		std::cout << "(" << startX << ", " << startY << "), (" << endX << ", " << endY << ")\n";
 	}
-	else {
+	else 
+	{
 		std::cout << "Not Found\n";
 	}
 }
 
 
 // Initializes neighbors of each Letter
-void WordGrid::initializeNeighbors(bool wrap) {
-	for (int y = 0; y < maxRowCount; y++) {
-		for (int x = 0; x < maxColCount; x++) {
+void WordGrid::initializeNeighbors(bool wrap) 
+{
+	for (int y = 0; y < maxRowCount; y++) 
+	{
+		for (int x = 0; x < maxColCount; x++) 
+		{
 			populateNeighbors(y, x, wrap);
 		}
 	}
